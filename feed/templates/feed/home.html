@@ -5,6 +5,13 @@
 {% endblock title %}
 
 {% block body %}
+
+    {% if request.user.is_authenticated %}
+        <a href="{% url %}"></a>
+    {% else %}
+        logged out
+    {% endif %}
+    <hr>
     {% for post in posts %}
         {{ post.text }} posted on {{ post.date }}
         <hr>
