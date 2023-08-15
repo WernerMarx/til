@@ -43,8 +43,9 @@ INSTALLED_APPS = [
 
     'feed',
     'allauth',
+    'profiles',
     'allauth.account',
-    'allauth.socialaccount'
+    'allauth.socialaccount',
 ]
 
 MIDDLEWARE = [
