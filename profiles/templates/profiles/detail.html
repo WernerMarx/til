@@ -22,7 +22,7 @@
                 <div class="text-center pb-6">
                     <button
                         type="button"
-                        class="border text-center border-gray-200 bg-gray-200 text-gray-700 rounded-md px-4 py-1 m-1 transition duration-500 ease select-none hover:bg-gray-300 focus:outline-none focus:shadow-outline js-follow" data-username="{{ user.username }}"
+                        class="border text-center border-gray-200 bg-gray-200 text-gray-700 rounded-md px-4 py-1 m-1 transition duration-500 ease select-none hover:bg-gray-300 focus:outline-none focus:shadow-outline js-follow" data-action="follow" data-url="{% url 'profiles:follow' user.username %}" data-username="{{ user.username }}"
                         >
                         <span class="js-follow-text">
                             Follow

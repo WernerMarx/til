@@ -28,7 +28,8 @@ $.ajaxSetup({
     },
 });
 
-$(document).on("click", ".js-toggle-modal", function(e) {
+$(document)
+.on("click", ".js-toggle-modal", function(e) {
     e.preventDefault()
     $(".js-modal").toggleClass("hidden")
 })
@@ -60,5 +61,9 @@ $(document).on("click", ".js-toggle-modal", function(e) {
             $btn.prop("disabled", false).text("Error");
         }
     });
-
+})
+.on("click", ".js-follow", function(e) {
+    e.preventDefault();
+    console.log("clicked");
+    
 })
