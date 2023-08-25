@@ -1,5 +1,6 @@
 from django.contrib.auth.models import User
-from django.views.generic import DetailView
+from django.views.generic import DetailView, View
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 from feed.models import Post
 
@@ -16,3 +17,6 @@ class ProfileDetailView(DetailView):
         context = super().get_context_data(**kwargs)
         context['total_posts'] = Post.objects.filter(author=user).count()
         return context
+    
+class FollowView(LoginRequiredMixin,View):
+    pass
